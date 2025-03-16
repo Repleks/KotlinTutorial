@@ -295,13 +295,13 @@ fun taskX() {
     println()
 }
 
-fun normalize(data: List<String?>): List<String> {
-    return data
-        .filterNotNull()
-        .map { it.trim() }
-        .filter { it.isNotEmpty() }
-        .map { it.uppercase() }
-}
+//fun normalize(data: List<String?>): List<String> {
+//    return data
+//        .filterNotNull()
+//        .map { it.trim() }
+//        .filter { it.isNotEmpty() }
+//        .map { it.uppercase() }
+//}
 
 fun taskXI() {
     println("=== Zadanie XI ===")
