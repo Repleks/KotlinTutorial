@@ -1,7 +1,7 @@
 import java.util.*
 
 fun main() {
-    task6()
+    task7()
 }
 
 fun task1() {
@@ -192,5 +192,28 @@ fun recursivePrint(i: Int, months: List<String>){
     }
     println("${i + 1}. ${months[i]}")
     recursivePrint(i + 1, months)
+}
+
+fun task7 () {
+    val products = mapOf(
+        "Japko" to 2.5,
+        "Gruszka" to 3.0,
+        "Banan" to 1.5,
+        "Pomarancza" to 2.0,
+        "Cytryna" to 1.0,
+        "Mango" to 4.0
+    )
+
+    val discounted = products.mapValues { (_, price) -> price * 0.8 }
+
+    println("Oryginalne ceny:")
+    products.forEach { (product, price) ->
+        println("$product = $price zł")
+    }
+
+    println("Ceny po obnizce:")
+    discounted.forEach { (product, price) ->
+        println("$product = $price zł")
+    }
 }
 
