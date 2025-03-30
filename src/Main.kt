@@ -1,7 +1,11 @@
 import java.util.*
 
 fun main() {
+<<<<<<< HEAD
     task7()
+=======
+    
+>>>>>>> 80fd953151c21300237e2eaef1c3747a3a25da1c
 }
 
 fun task1() {
@@ -194,6 +198,7 @@ fun recursivePrint(i: Int, months: List<String>){
     recursivePrint(i + 1, months)
 }
 
+<<<<<<< HEAD
 fun task7 () {
     val products = mapOf(
         "Japko" to 2.5,
@@ -217,3 +222,60 @@ fun task7 () {
     }
 }
 
+=======
+fun task9 (vararg elements: String):Map<String, String>{
+    val list = elements.toList()
+    list.forEach { it.lowercase() }
+    val answerMap = mutableMapOf<String, String>()
+    for(key in answerMap) {
+        val tmp = key.value
+        when (tmp) {
+            "luty", "lipiec", "sierpien", "wrzesien" -> {
+                answerMap[key.value] = "Semestr letni"
+            }
+
+            "pazdziernik", "listopad", "grudzien", "styczen" -> {
+                answerMap[key.value] = "Semestr zimowy"
+            }
+
+            "marzec", "kwiecien", "maj", "czerwiec" -> {
+                answerMap[key.value] = "Semestr wiosenny"
+            }
+
+            else -> {
+                println("Nie ma takiego miesiąca")
+            }
+        }
+    }
+    return answerMap
+}
+
+fun task10(start: Int, end: Int, step: Int): List<Int> {
+    val list = mutableListOf<Int>()
+    for(i in start..end step step){
+        list.add(i)
+    }
+    return list
+}
+
+fun task11(data: List<String?>): List<String> {
+    val list = mutableListOf<String>()
+    for(i in data){
+        if(i != null){
+            list.add(i)
+        }
+    }
+    return list
+}
+
+fun normalize(data: List<String?>): List<String> {
+    val list = mutableListOf<String>()
+    for(i in data){
+        if(i != null){
+            list.add(i)
+        }
+    }
+    list.forEach { it.trim().uppercase() }
+    return list
+}
+>>>>>>> 80fd953151c21300237e2eaef1c3747a3a25da1c
